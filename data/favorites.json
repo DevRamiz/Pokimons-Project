@@ -1,0 +1,23 @@
+[
+  {
+    "userId": "0dfd1451-ac20-41d6-b2b3-275e96b11022",
+    "pokemonIds": [
+      "6",
+      "37"
+    ]
+  },
+  {
+    "userId": "e6d9ced3-a5c6-4f9c-a387-8b357232e9f2",
+    "pokemonIds": [
+      "9"
+    ]
+  },
+  {
+    "userId": "a753974b-c8fb-4028-b5b4-f40a363c64ca",
+    "pokemonIds": [
+      "6",
+      "37",
+      "38"
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Pokimons — Leaderboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Pokimons</h1>
+  <div class="topbar">
+    <div class="nav">
+      <a class="link-btn" href="index.html">Home</a>
+      <a class="link-btn" href="search.html">Search</a>
+      <a class="link-btn" href="favorites.html">Favorites</a>
+      <a class="link-btn" href="arena.html">Arena</a>
+      <a class="link-btn" href="leaderboard.html">Leaderboard</a>
+      <a class="link-btn" href="login.html" id="loginLink" style="display:none">Login</a>
+      <a class="link-btn" href="register.html" id="registerLink" style="display:none">Register</a>
+    </div>
+    <span id="userBox"></span>
+  </div>
+</header>
+
+<main>
+  <div class="panel">
+    <h2>Leaderboard</h2>
+    <p class="muted">Only users with at least 6 battles appear.</p>
+    <div id="lbWrap" class="notice">Loading...</div>
+    <table id="lbTable" class="table" style="display:none">
+      <thead><tr>
+        <th>#</th><th>Player</th><th>Games</th><th>W</th><th>T</th><th>L</th><th>Points</th><th>Success %</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</main>
+
+<script src="shared.js" type="module"></script>
+<script src="leaderboard.js" type="module"></script>
+</body>
+</html>

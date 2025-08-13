@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Pokimons — Arena</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Pokimons</h1>
+  <div class="topbar">
+    <div class="nav">
+      <a class="link-btn" href="index.html">Home</a>
+      <a class="link-btn" href="search.html">Search</a>
+      <a class="link-btn" href="favorites.html">Favorites</a>
+      <a class="link-btn" href="arena.html">Arena</a>
+      <a class="link-btn" href="leaderboard.html">Leaderboard</a>
+      <a class="link-btn" href="login.html" id="loginLink" style="display:none">Login</a>
+      <a class="link-btn" href="register.html" id="registerLink" style="display:none">Register</a>
+    </div>
+    <span id="userBox"></span>
+  </div>
+</header>
+
+<main>
+  <div class="panel">
+    <h2>Arena</h2>
+    <p class="muted">Pick a specific Pokémon (id or name), or leave blank to use a random pick.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+      <div class="panel" style="margin:0">
+        <h3>Random vs Player</h3>
+        <form id="rvpForm">
+          <input name="myPokemonId" placeholder="optional id or name" />
+          <button>Fight!</button>
+        </form>
+        <div id="rvpOut" class="notice"></div>
+      </div>
+      <div class="panel" style="margin:0">
+        <h3>vs Bot</h3>
+        <form id="botForm">
+          <input name="myPokemonId" placeholder="optional id or name" />
+          <button>Fight!</button>
+        </form>
+        <div id="botOut" class="notice"></div>
+      </div>
+      <div class="panel" style="margin:0">
+        <h3>Favorites vs Player</h3>
+        <form id="favForm">
+          <select id="favSelect">
+            <option value="">Loading your favorites…</option>
+          </select>
+          <button>Fight!</button>
+        </form>
+        <div class="muted" style="margin-top:6px">Choose one of your favorites, or leave blank to use a random favorite. Opponent uses a random favorite.</div>
+        <div id="favOut" class="notice"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="shared.js" type="module"></script>
+<script src="arena.js" type="module"></script>
+</body>
+</html>

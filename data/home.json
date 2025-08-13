@@ -1,0 +1,13 @@
+{
+  "appName": "Pokimons",
+  "tagline": "A tiny Pokédex with favorites and an arena — built for the Web Dev project.",
+  "about": [
+    "Search Pokémon by id, type, or ability.",
+    "Register to save favorites, battle in the arena, and climb the leaderboard.",
+    "This Home page content is loaded from a server JSON file."
+  ],
+  "developers": [
+    { "name": "Ramiz Dweiry", "id": "208131557" },
+    { "name": "Ayman Abu Leil", "id": "206466435" }
+  ]
+}

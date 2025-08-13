@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Pokimons — Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="common.js" defer></script>
+</head>
+<body>
+<header>
+  <h1>Pokimons</h1>
+  <div class="topbar">
+    <div class="nav">
+      <a class="link-btn" href="index.html">Home</a>
+      <a class="link-btn" href="search.html">Search</a>
+      <a class="link-btn" href="favorites.html">Favorites</a>
+      <a class="link-btn" href="arena.html">Arena</a>
+      <a class="link-btn" href="leaderboard.html">Leaderboard</a>
+      <a class="link-btn" href="login.html">Login</a>
+      <a class="link-btn" href="register.html">Register</a>
+    </div>
+    <span id="userBox"></span>
+  </div>
+</header>
+
+<main>
+  <!-- shows when redirected from a protected page -->
+  <div id="flashMsg" class="notice" style="display:none"></div>
+
+  <div class="panel" id="homeApp">
+    <h2>Pokimons</h2>
+    <p class="muted">A tiny Pokédex with favorites and an arena — built for the Web Dev project.</p>
+
+    <div class="panel">
+      <h3>About</h3>
+      <p>This site lets you search Pokémon by id, type, or ability.</p>
+      <p>Create an account to save favorites, battle players or a bot in the arena, and climb the leaderboard.</p>
+      <p>This Home page uses static HTML (no fetch required).</p>
+    </div>
+
+    <div class="panel">
+      <h3>Developers</h3>
+      <ul>
+        <li>Ramiz Dweiry — 208131557</li>
+        <li>Ayman Abu Leil — 206466435</li>
+      </ul>
+    </div>
+
+    <p class="notice">
+      <a class="link-btn" href="search.html">Start Searching</a>
+    </p>
+  </div>
+</main>
+
+<script>
+  // show the small banner if redirected from a protected page
+  (function(){
+    const msg = new URLSearchParams(location.search).get('msg');
+    if (msg === 'login_required') {
+      const box = document.getElementById('flashMsg');
+      box.textContent = 'Please log in to access that page.';
+      box.style.display = 'block';
+      const u = new URL(location.href);
+      u.searchParams.delete('msg');
+      history.replaceState(null,'',u.pathname);
+    }
+  })();
+</script>
+</body>
+</html>

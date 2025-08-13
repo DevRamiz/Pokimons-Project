@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Pokimons — Register</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Pokimons</h1>
+  <div class="topbar">
+    <div class="nav">
+      <a class="link-btn" href="index.html">Home</a>
+      <a class="link-btn" href="search.html">Search</a>
+      <a class="link-btn" href="favorites.html">Favorites</a>
+      <a class="link-btn" href="arena.html">Arena</a>
+      <a class="link-btn" href="leaderboard.html">Leaderboard</a>
+      <a class="link-btn" href="login.html" id="loginLink" style="display:none">Login</a>
+      <a class="link-btn" href="register.html" id="registerLink" style="display:none">Register</a>
+    </div>
+    <span id="userBox"></span>
+  </div>
+</header>
+
+<main>
+  <div class="panel" style="max-width:520px">
+    <h2>Create account</h2>
+    <form id="regForm" novalidate>
+  <input name="firstName" placeholder="First name" />
+  <input name="email" type="email" placeholder="Email" />
+  <input name="password" type="password" placeholder="Password" />
+  <input name="confirmPassword" type="password" placeholder="Confirm password" />
+  <button>Register</button>
+  </form>
+  <p id="regMsg" class="notice"></p>
+  </div>
+</main>
+<script src="shared.js" type="module"></script>
+<script src="register.js" type="module"></script>
+</body>
+</html>
